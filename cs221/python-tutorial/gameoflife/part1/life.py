@@ -25,7 +25,6 @@ class Life:
   # Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
   def __init__(self, board):
-    # YOUR CODE HERE
     self.num_rows = len(board)
     self.num_cols = len(board[0])
     # First initialize to all empty dict.
@@ -33,23 +32,18 @@ class Life:
     duplicateBoard(board, self.board, self.num_rows, self.num_cols)
 
   def isAlive(self, row, col):
-    # YOUR CODE HERE
     return self.board[row][col]['alive']
   
   def setAlive(self, row, col, tf):
-    # YOUR CODE HERE
     self.board[row][col]['alive'] = tf
     
   def getNumRows(self):
-    # YOUR CODE HERE
     return self.num_rows
     
   def getNumCols(self):
-    # YOUR CODE HERE
     return self.num_cols
     
   def runTimeStep(self):
-    # YOUR CODE HERE
     tmp_board = getEmptyBoard(self.num_rows, self.num_cols)
     duplicateBoard(self.board, tmp_board, self.num_rows, self.num_cols)
     for r in range(self.num_rows):
