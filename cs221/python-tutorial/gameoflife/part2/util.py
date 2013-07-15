@@ -4,7 +4,7 @@ import cell
 # Jeff Jacobs, for CS221
 
 def loadBoard(filename):
-  with open("board.csv") as f:
+  with open(filename) as f:
       content = f.readlines()
       
   rows = len(content)
